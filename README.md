@@ -59,33 +59,75 @@ The app will open in your default web browser. If not, go to the URL shown in yo
 # 🧭 How to Use the App
 ## Option A: 📁 Upload a .wav file
 
-- Click “Upload a .wav file”
+- Open (https://morse-code-decoder.streamlit.app/) in your phone browser or on your desktop browser
 
-- Adjust the Bandpass Filter slider, ideally move it to where you see the morse pattern in the spectogram (can also auto-detect Morse tone)
+- Tap 🎙 Switch to Microphone Mode
 
-- Toggle Enhance for Microphone Recording if needed
+- Tap 🎙 Start Microphone Input
 
-- View the interactive spectrogram (zoom in or out)
+- Allow browser access to your microphone if prompted
 
-- Review the detected Morse code
+- Play the Morse audio from the game or recording if you have that and put your microphone or phone near the speaker
 
-- (Optional) Edit the Morse string manually (if un-clear, look at the spectogram and edit the morse code manually)
+- Once done, stop recording. The app will analyze the audio automatically.
 
-- See the decoded message and the AI-corrected guess
+- You can re-play the recorded audio to listen back to how it sounds (test out to see if your phone has silenced or distorted the sounds of the Morse code)
 
-- Use “Reset to Detected Morse” if you need to undo your edits
+- you can download the recorded-audio if you want as well
+
+- after analyzing the recorded sound, the app will show you:
+
+    - The resulting spectrogram of the recording
+    - the estimated Morse frequency (the app is smart enough to notice the Morse code pattern within the spectrogram and pre-select the band frequency)
+    - The decoded Morse string (this is editable, so if you want you can manually edit this to change the output or look at the spectrogram and edit this yourself)
+    - The decoded Morse in text
+    - An AI guessor
+
+```Note: some phones do have high noise cancellation so it might reduce the sound of the Morse code or make it silent, in such cases, try bringing the phone closer to the speaker or in some cases reduce the volume of the speaker so that it does not cancel it as much.```
+
+**If none of the above works, record the audio from the speakers using your phone's voice recorder (every phone has this app) or download a voice recording app from apple store or google play store, make sure it saves the recording as .wav though and follow Option 2 below**
+
+### 🎧 Tips for best results:
+
+- Get close to the sound source
+
+- Keep background noise low
+
+- You can also use the “🎙 Enhance for Microphone Recording” to boost weak signals (although if your phone is already silencing the morse code's audio this might make it worse)
+
+### 🧪 Optional Tweaks:
+
+Use the bandpass filter slider to zero in on the Morse frequency (~800 to 850 Hz), every audio uploaded to this app will generate a spectogram and you most likely will be able to see the dot and dashes in a straight horizontal line, just try and move the slider so it focuses perfectly within the height of those bands (For all the morse code tests I have done on BF1, it almost always has the Morse code from around 750 to 830 Hz). 
 
 ## Option B: 🎙 Use Microphone Mode
 
-- Click “🎙️ Switch to Microphone Mode”
+- Open (https://morse-code-decoder.streamlit.app/) in your browser (desktop or mobile)
 
-- Click Start Microphone Input
+- Use the default File Upload Mode
 
-- Press Record (allow browser permission)
+- Upload your .wav file (you can record the sound of the Morse code via a voice recording app on your phone or record from your desktop microphone)
 
-- After recording, audio is auto-processed
+- The app will immediately process the signal and show:
 
-- You can download the .wav, view the spectrogram, and continue as above
+    - The spectrogram
+    - The estimated Morse frequency
+    - The decoded Morse string (this is editable, so if you want you can manually edit this to change the output or look at the spectrogram and edit this yourself)
+    - The decoded Morse in text
+    - An AI guessor
+
+### 🧪 You can improve the results by:
+
+- Adjusting the frequency filter slider
+
+- **Trying different Detection Modes:**
+
+    - Standard (Merged) – balanced and fast
+    - Short Gap Merge (<10ms) – fixes slight signal breaks, if the gaps between the nodes are tiny use this
+    - High Precision (No Merge) – clean for clearly spaced taps
+
+You can also edit the morse code string directly, just look at the spectrogram and edit the morse code according to it and it will update the text with your changes (at the top you can toggle the show decoded spectrogram and it will filter the spectrogram so that you can see the Morse code better).
+
+**Remember! - not every Morse code will be decoded perfectly using this, but this will help you decode most of battlefield 1's morse codes easily, all you need is some clue as to what the morse code might be and search for that text or sentence in (https://wiki.bfee.co/BF1) battlefield 1 wiki and you will almost always find your decoded text.** 
 
 ## 🧪 Audio Format Guidelines
 
@@ -95,12 +137,6 @@ The app will open in your default web browser. If not, go to the URL shown in yo
 
 - Compressed formats like .mp3 are not supported
 
-## 🧪 Detection Modes
-Choose between the different modes to see if the decoded text becomes clearer
-
-- Standard (Merged) – Smooth balance between speed and accuracy
-- Short Gap Merge (<10ms) – Fixes broken signals from noisy inputs (if the gap between the nodes are about 10ms use this)
-- High Precision (No Merge) – Great for tightly spaced signals (use this option if the gap between the nodes are super tiny)
 
 ## 👩‍💻 For Developers
 
