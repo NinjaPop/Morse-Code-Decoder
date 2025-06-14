@@ -44,7 +44,7 @@ plotly
 
     git clone https://github.com/NinjaPop/Morse-Code-Decoder.git
 
-    cd morse--code-decoder
+    cd morse-code-decoder
 
 run the app.py via cmd:
 
