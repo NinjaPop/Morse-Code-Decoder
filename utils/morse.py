@@ -22,7 +22,7 @@ def detect_morse(y, sr, mode="Standard (Merged)", enhance=False):
     # else:
     #     threshold = 0.3 * np.max(envelope)
 
-    threshold = (0.15 if enhance else 0.3) * np.max(envelope)
+    threshold = (0.10 if enhance else 0.3) * np.max(envelope)
     tone_mask = envelope > threshold
 
     changes = np.diff(tone_mask.astype(int))
