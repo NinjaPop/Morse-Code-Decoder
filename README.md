@@ -1,4 +1,4 @@
-# 🔊 Morse Code Decoder (Streamlit App)
+# 🔊 Morse Code Decoder
 
 A modern, interactive web app for decoding Morse code audio signals — either from uploaded .wav files or real-time microphone input. Powered by signal processing, clustering, and dynamic UI features built with Streamlit.
 
