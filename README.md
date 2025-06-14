@@ -19,6 +19,8 @@ A modern, interactive web app for decoding Morse code audio signals — either f
 
 ## 🔧 Requirements
 
+**If you have Dark Reader browser extension make sure to disable it for this app as it will cause some issues**
+
 Install the dependencies using pip:
 
 ```pip install -r requirements.txt```
