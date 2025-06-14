@@ -226,9 +226,19 @@ def render_main_ui():
             st.rerun()
 
         with st.expander("About this tool"):
-            st.markdown("*Measure. Uncover. Signal Alignment.*")
-            st.caption("A subtle tribute to M.U.S.A.")
+            st.markdown("""
+            This tool was created as a fun project to tackle the Battlefield 1 Peacekeeper Easter egg, and it's now open source!  
+            You can view or contribute to the code on <a href="https://github.com/NinjaPop/Morse-Code-Decoder" target="_blank">GitHub</a>.
 
+            *Measure. Uncover. Signal Alignment.*
+            """, unsafe_allow_html=True)
+
+        st.markdown("""
+            <div style='text-align: center; font-size: 16px; margin-top: 40px;'>
+                Was the app helpful? <a href="https://github.com/NinjaPop/Morse-Code-Decoder" target="_blank">Give it a ⭐ on GitHub</a>!
+            </div>
+        """, unsafe_allow_html=True)
+        
         st.markdown("""
         <hr style='border-top: 1px solid #bbb; margin-top: 30px;'>
         <div style='text-align: center; font-size: 14px; color: gray;'>
