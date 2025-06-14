@@ -82,7 +82,7 @@ def render_main_ui():
             y, sr = load_audio_from_file(uploaded_file)
 
         enhance_mic = st.checkbox(
-            "🎙 Enhance for Microphone Recording (noisy or playback - May result in worse audio decoding!!!)",
+            "🎙 Enhance the audio and narrow the threshold (focuses more on the band, removes static noises - May result in worse audio decoding when recorded from a poor microphone!!!)",
             value=False
         )
 
