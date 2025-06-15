@@ -57,6 +57,27 @@ or open the ```run_morse_code_decoder.py via VS-Code or any python IDE``` and ru
 The app will open in your default web browser. If not, go to the URL shown in your terminal ```(usually http://localhost:8501)```
 
 # 🧭 How to Use the App
+## Before proceeding with Option A, try and do this step for an easier time, if on a PC or laptop:
+
+- on Windows 11 go to sound settings
+  
+- scroll download to Advanced section
+  
+- click on All sound devices
+  
+- scroll down on input devices and click on Stereo Mix
+  
+- allow the audio
+  
+- go back to sound settings main page
+  
+- in input, select Stereo Mix as microphone input
+
+Now when you play an audio on your desktop it will loopback as microphone input to the app and you wont have to upload or record an audio through a microphone,
+you just play the audio on your browser or if its a game in-game and click on record button on the app to start hearing that audio
+
+Troubleshoot: if you cannot hear the Stereo Mix when playing an audio, make sure to select Speakers (Realtek(R) Audio) and do a test by clicking on the Stereo Mix in sound setting and testing.
+
 ## Option A: 📁 Upload a .wav file
 
 - Open (https://morse-code-decoder.streamlit.app/) in your phone browser or on your desktop browser
