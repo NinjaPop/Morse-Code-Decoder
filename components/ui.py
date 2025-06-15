@@ -214,12 +214,12 @@ def render_main_ui():
             unsafe_allow_html=True
         )
 
-        guessed = ai_guess_words(decoded_text)
-        if guessed != decoded_text:
-            st.markdown(
-                f"<div style='font-size: 22px; color: orange;'>🤖 AI Guess: <b>{guessed}</b></div>",
-                unsafe_allow_html=True
-            )
+        #guessed = ai_guess_words(decoded_text)
+        #if guessed != decoded_text:
+        #    st.markdown(
+        #        f"<div style='font-size: 22px; color: orange;'>🤖 AI Guess: <b>{guessed}</b></div>",
+        #        unsafe_allow_html=True
+        #    )
 
         if st.button("🔄 Reset to Detected Morse"):
             st.session_state["morse_edit"] = st.session_state["morse_original"]
